@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/MedusaCompiler.dir/AST.cpp.o CMakeFiles/MedusaCompiler.dir/App.cpp.o CMakeFiles/MedusaCompiler.dir/lexer.cpp.o -o MedusaCompiler 

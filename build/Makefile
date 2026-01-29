@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bernardo/projects/cpp_projects/MedusaCompiler
+CMAKE_SOURCE_DIR = /home/bernardo/projects/MedusaCompiler
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bernardo/projects/cpp_projects/MedusaCompiler/build
+CMAKE_BINARY_DIR = /home/bernardo/projects/MedusaCompiler/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bernardo/projects/cpp_projects/MedusaCompiler/build/CMakeFiles /home/bernardo/projects/cpp_projects/MedusaCompiler/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bernardo/projects/MedusaCompiler/build/CMakeFiles /home/bernardo/projects/MedusaCompiler/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bernardo/projects/cpp_projects/MedusaCompiler/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bernardo/projects/MedusaCompiler/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,89 +117,65 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named MedusaCompiler
+# Target rules for targets named medusa
 
 # Build rule for target.
-MedusaCompiler: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MedusaCompiler
-.PHONY : MedusaCompiler
+medusa: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 medusa
+.PHONY : medusa
 
 # fast build rule for target.
-MedusaCompiler/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MedusaCompiler.dir/build.make CMakeFiles/MedusaCompiler.dir/build
-.PHONY : MedusaCompiler/fast
+medusa/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/medusa.dir/build.make CMakeFiles/medusa.dir/build
+.PHONY : medusa/fast
 
-AST.o: AST.cpp.o
-.PHONY : AST.o
-
-# target to build an object file
-AST.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MedusaCompiler.dir/build.make CMakeFiles/MedusaCompiler.dir/AST.cpp.o
-.PHONY : AST.cpp.o
-
-AST.i: AST.cpp.i
-.PHONY : AST.i
-
-# target to preprocess a source file
-AST.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MedusaCompiler.dir/build.make CMakeFiles/MedusaCompiler.dir/AST.cpp.i
-.PHONY : AST.cpp.i
-
-AST.s: AST.cpp.s
-.PHONY : AST.s
-
-# target to generate assembly for a file
-AST.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MedusaCompiler.dir/build.make CMakeFiles/MedusaCompiler.dir/AST.cpp.s
-.PHONY : AST.cpp.s
-
-App.o: App.cpp.o
-.PHONY : App.o
+src/lexer.o: src/lexer.cpp.o
+.PHONY : src/lexer.o
 
 # target to build an object file
-App.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MedusaCompiler.dir/build.make CMakeFiles/MedusaCompiler.dir/App.cpp.o
-.PHONY : App.cpp.o
+src/lexer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/medusa.dir/build.make CMakeFiles/medusa.dir/src/lexer.cpp.o
+.PHONY : src/lexer.cpp.o
 
-App.i: App.cpp.i
-.PHONY : App.i
+src/lexer.i: src/lexer.cpp.i
+.PHONY : src/lexer.i
 
 # target to preprocess a source file
-App.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MedusaCompiler.dir/build.make CMakeFiles/MedusaCompiler.dir/App.cpp.i
-.PHONY : App.cpp.i
+src/lexer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/medusa.dir/build.make CMakeFiles/medusa.dir/src/lexer.cpp.i
+.PHONY : src/lexer.cpp.i
 
-App.s: App.cpp.s
-.PHONY : App.s
+src/lexer.s: src/lexer.cpp.s
+.PHONY : src/lexer.s
 
 # target to generate assembly for a file
-App.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MedusaCompiler.dir/build.make CMakeFiles/MedusaCompiler.dir/App.cpp.s
-.PHONY : App.cpp.s
+src/lexer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/medusa.dir/build.make CMakeFiles/medusa.dir/src/lexer.cpp.s
+.PHONY : src/lexer.cpp.s
 
-lexer.o: lexer.cpp.o
-.PHONY : lexer.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-lexer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MedusaCompiler.dir/build.make CMakeFiles/MedusaCompiler.dir/lexer.cpp.o
-.PHONY : lexer.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/medusa.dir/build.make CMakeFiles/medusa.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-lexer.i: lexer.cpp.i
-.PHONY : lexer.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-lexer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MedusaCompiler.dir/build.make CMakeFiles/MedusaCompiler.dir/lexer.cpp.i
-.PHONY : lexer.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/medusa.dir/build.make CMakeFiles/medusa.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-lexer.s: lexer.cpp.s
-.PHONY : lexer.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-lexer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MedusaCompiler.dir/build.make CMakeFiles/MedusaCompiler.dir/lexer.cpp.s
-.PHONY : lexer.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/medusa.dir/build.make CMakeFiles/medusa.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -209,16 +185,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... MedusaCompiler"
-	@echo "... AST.o"
-	@echo "... AST.i"
-	@echo "... AST.s"
-	@echo "... App.o"
-	@echo "... App.i"
-	@echo "... App.s"
-	@echo "... lexer.o"
-	@echo "... lexer.i"
-	@echo "... lexer.s"
+	@echo "... medusa"
+	@echo "... src/lexer.o"
+	@echo "... src/lexer.i"
+	@echo "... src/lexer.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 
